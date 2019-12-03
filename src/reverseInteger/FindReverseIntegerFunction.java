@@ -14,7 +14,7 @@ public class FindReverseIntegerFunction {
 			x = x * -1;
 		}
 		
-		// result
+		// result 
 		long reversedResult = 0;
 		
 		// while it is not equal to 0
