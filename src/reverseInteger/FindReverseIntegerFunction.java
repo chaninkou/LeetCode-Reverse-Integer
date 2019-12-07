@@ -14,7 +14,7 @@ public class FindReverseIntegerFunction {
 			x = x * -1;
 		}
 		
-		// result 
+		// Long instead of int so we could check if reverse integer is overflow or not
 		long reversedResult = 0;
 		
 		// while it is not equal to 0
@@ -27,12 +27,13 @@ public class FindReverseIntegerFunction {
 			x = x / 10;
 		}
 		
-		// Checking if the reversed integer overflows, return 0 if it does
+		// Checking if the reversed integer overflows with integer.max_value since thats the max
 		if(reversedResult > Integer.MAX_VALUE){
 			return 0;
 		}
 		
-		// If its negative, make the result to negative by * -1, if not, return the result 
+		// If its negative, make the result to negative by * -1, if not, return the result
+		// Casting to int cause the solution return an integer
 		return isNegative ? (int) (-1 * reversedResult) : (int) reversedResult;
 	}
 	
