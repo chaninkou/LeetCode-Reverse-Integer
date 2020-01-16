@@ -20,7 +20,7 @@ public class FindReverseIntegerFunction {
 		// while it is not equal to 0
 		while(x > 0){
 			// x % 10 will get last digit
-			// result * 10 will get the right amount of digits
+			// result * 10 will get the right amount of digits, since you don't want to just add the value
 			reversedResult = (reversedResult * 10) + (x % 10);
 			
 			// Delete the last digit from x
